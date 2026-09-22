@@ -120,13 +120,33 @@
     background:none; border:none; color:var(--ink);
     font-size:1.6rem; cursor:pointer;
   }
+  /* Item extra dentro do menu mobile com o botão de contato.
+     Some no menu do PC; só aparece dentro do painel mobile. */
+  .nav-links li.cta-mobile{ display:none; }
+
+  /* Fundo escurecido atrás do painel mobile, para deixar claro que é
+     uma camada por cima do site e permitir fechar tocando fora dele. */
+  .nav-backdrop{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(4,10,20,0.6);
+    z-index:40;
+  }
+  .nav-backdrop.open{ display:block; }
+  body.menu-open{ overflow:hidden; }
+
   @media (max-width:860px){
     .nav-links{
       position:absolute; top:100%; left:0; right:0;
+      max-height:calc(100vh - 100%);
+      overflow-y:auto;
       background:var(--bg-alt);
       flex-direction:column;
       gap:0;
       border-bottom:1px solid var(--line);
+      box-shadow:0 16px 32px rgba(4,10,20,0.35);
+      z-index:55;
       display:none;
     }
     .nav-links.open{ display:flex; }
@@ -136,7 +156,17 @@
       display:block;
       color:var(--ink);
     }
-    .nav-toggle{ display:block; }
+    .nav-links li.cta-mobile{
+      display:block;
+      padding:20px 32px 28px;
+      border-top:1px solid var(--line);
+    }
+    .nav-links li.cta-mobile a{
+      padding:0;
+      border-top:none;
+      display:inline-flex;
+    }
+    .nav-toggle{ display:block; position:relative; z-index:56; }
     .nav-cta .btn-primary{ display:none; }
   }
 

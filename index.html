@@ -56,19 +56,22 @@
       <!-- EDITE AQUI: nome da empresa -->
       Elev Marketing Digital
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false">☰</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="sobre.html">Sobre nós</a></li>
       <li><a href="projetos.html">Projetos</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
       <li><a href="#contato">Contato</a></li>
+      <!-- Este item só aparece no menu do celular, com o mesmo botão do PC -->
+      <li class="cta-mobile"><a href="#contato" class="btn btn-primary">Falar com a agência</a></li>
     </ul>
     <div class="nav-cta">
       <a href="#contato" class="btn btn-primary">Falar com a agência</a>
     </div>
   </nav>
 </header>
+<div class="nav-backdrop" id="navBackdrop"></div>
 
 <main id="topo">
 
