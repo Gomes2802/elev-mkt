@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos — Elev Marketing Digital</title>
+<meta name="description" content="Conheça alguns dos projetos que a Elev Marketing Digital já entregou para clientes.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13" cy="13" r="11.5" stroke="#4FA6E8" stroke-width="1.5"/>
+        <path d="M8 15L13 9L18 15" stroke="#4FA6E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 9V17" stroke="#4FA6E8" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <!-- EDITE AQUI: nome da empresa -->
+      Elev Marketing Digital
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="sobre.html">Sobre nós</a></li>
+      <li><a href="index.html#servicos">Serviços</a></li>
+      <li><a href="projetos.html" class="active">Projetos</a></li>
+      <li><a href="index.html#resultados">Resultados</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="index.html#contato" class="btn btn-primary">Falar com a agência</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===================== SEÇÃO: PROJETOS ===================== -->
+  <section class="projects-hero">
+    <div class="wrap">
+      <p class="eyebrow">Trabalhos que já fizemos</p>
+      <h1>Projetos entregues a clientes</h1>
+      <p class="lede">
+        Clique em cada projeto para ver os detalhes: o que foi feito, os
+        números alcançados e o que o cliente disse sobre o resultado.
+      </p>
+    </div>
+  </section>
+
+  <section class="projects-list">
+    <div class="wrap">
+      <!--
+        EDITE AQUI: cada <article class="project-card"> é um projeto.
+        Copie e cole um bloco inteiro para adicionar mais um card.
+        O clique no botão "project-toggle" é o que abre/fecha os detalhes
+        — isso já funciona sozinho, não precisa mexer no script.js.
+      -->
+
+      <article class="project-card">
+        <button class="project-toggle" aria-expanded="false" aria-controls="projeto-1">
+          <div class="project-toggle-info">
+            <span class="project-tag">Tráfego pago · E-commerce</span>
+            <h3>Reestruturação de campanhas — Loja de moda feminina</h3>
+            <p class="project-client">Cliente: loja de moda feminina, SP</p>
+          </div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="project-panel" id="projeto-1">
+          <div class="project-panel-inner">
+            <p>
+              A marca já investia em anúncios, mas sem estrutura de funil: as
+              campanhas competiam entre si e o checkout tinha uma taxa alta de
+              abandono. Reorganizamos as campanhas por etapa de compra,
+              redesenhamos a página de checkout e passamos a testar criativos
+              em ciclos semanais.
+            </p>
+            <div class="project-metrics">
+              <div><strong>+184%</strong><span>em vendas no 1º trimestre</span></div>
+              <div><strong>-32%</strong><span>na taxa de abandono de carrinho</span></div>
+              <div><strong>4 meses</strong><span>de duração do projeto</span></div>
+            </div>
+            <p class="project-quote">
+              "Em seis meses entendemos, pela primeira vez, de onde vinham
+              nossas vendas de verdade." — Marina Alves, sócia
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <button class="project-toggle" aria-expanded="false" aria-controls="projeto-2">
+          <div class="project-toggle-info">
+            <span class="project-tag">Geração de leads · Saúde</span>
+            <h3>Redução de custo por lead — Clínica odontológica</h3>
+            <p class="project-client">Cliente: clínica odontológica, PR</p>
+          </div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="project-panel" id="projeto-2">
+          <div class="project-panel-inner">
+            <p>
+              O custo por lead estava alto porque os anúncios atraiam
+              curiosos, não pacientes com intenção real de agendar consulta.
+              Refizemos a segmentação por bairro e faixa etária, trocamos os
+              criativos por depoimentos em vídeo e simplificamos o formulário
+              de agendamento.
+            </p>
+            <div class="project-metrics">
+              <div><strong>R$ 6,20</strong><span>custo por lead qualificado</span></div>
+              <div><strong>-58%</strong><span>no custo por lead</span></div>
+              <div><strong>3 meses</strong><span>até o resultado estabilizar</span></div>
+            </div>
+            <p class="project-quote">
+              "O relatório mensal é o único que a nossa equipe realmente lê
+              até o fim." — Ricardo Nunes, diretor
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <button class="project-toggle" aria-expanded="false" aria-controls="projeto-3">
+          <div class="project-toggle-info">
+            <span class="project-tag">E-mail + remarketing · Cosméticos</span>
+            <h3>Funil de recompra — E-commerce de cosméticos</h3>
+            <p class="project-client">Cliente: e-commerce de cosméticos, RS</p>
+          </div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="project-panel" id="projeto-3">
+          <div class="project-panel-inner">
+            <p>
+              A base de clientes comprava uma vez e não voltava. Criamos um
+              fluxo de e-mail pós-compra combinado com anúncios de
+              remarketing segmentados por produto comprado, incentivando a
+              recompra no momento certo do ciclo de uso.
+            </p>
+            <div class="project-metrics">
+              <div><strong>3,1x</strong><span>retorno sobre investimento em anúncios</span></div>
+              <div><strong>+41%</strong><span>em recompra nos primeiros 90 dias</span></div>
+              <div><strong>6 meses</strong><span>de acompanhamento contínuo</span></div>
+            </div>
+            <p class="project-quote">
+              "Trocamos de agência três vezes antes. Foi a primeira que
+              tratou orçamento como dinheiro nosso." — Fernanda Costa,
+              fundadora
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <button class="project-toggle" aria-expanded="false" aria-controls="projeto-4">
+          <div class="project-toggle-info">
+            <span class="project-tag">SEO e conteúdo · Serviços B2B</span>
+            <h3>Tráfego orgânico do zero — Consultoria contábil</h3>
+            <p class="project-client">Cliente: consultoria contábil, PR</p>
+          </div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="project-panel" id="projeto-4">
+          <div class="project-panel-inner">
+            <p>
+              O site praticamente não recebia visitas de busca orgânica.
+              Fizemos correções técnicas de SEO, criamos um blog com
+              conteúdo respondendo dúvidas reais de clientes e organizamos
+              as páginas de serviço em torno dos termos que o público
+              pesquisa.
+            </p>
+            <div class="project-metrics">
+              <div><strong>+312%</strong><span>em tráfego orgânico em 8 meses</span></div>
+              <div><strong>22</strong><span>páginas na 1ª página do Google</span></div>
+              <div><strong>8 meses</strong><span>até os resultados consolidarem</span></div>
+            </div>
+            <p class="project-quote">
+              "Hoje o site traz cliente todo mês sem precisarmos pagar por
+              anúncio." — cliente da consultoria contábil
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <button class="project-toggle" aria-expanded="false" aria-controls="projeto-5">
+          <div class="project-toggle-info">
+            <span class="project-tag">Branding · Franquia</span>
+            <h3>Reposicionamento de marca — Rede de academias</h3>
+            <p class="project-client">Cliente: rede de academias, SC</p>
+          </div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="project-panel" id="projeto-5">
+          <div class="project-panel-inner">
+            <p>
+              A marca tinha identidade visual datada e nenhum padrão entre as
+              unidades. Redesenhamos a identidade, criamos um guia de tom de
+              voz para redes sociais e padronizamos o material usado por
+              todas as unidades franqueadas.
+            </p>
+            <div class="project-metrics">
+              <div><strong>12</strong><span>unidades padronizadas</span></div>
+              <div><strong>+65%</strong><span>em engajamento nas redes sociais</span></div>
+              <div><strong>2 meses</strong><span>de projeto de identidade</span></div>
+            </div>
+            <p class="project-quote">
+              "Pela primeira vez todas as unidades parecem parte da mesma
+              rede." — diretoria da rede de academias
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <button class="project-toggle" aria-expanded="false" aria-controls="projeto-6">
+          <div class="project-toggle-info">
+            <span class="project-tag">Dados e dashboards · Varejo</span>
+            <h3>Visibilidade total de canais — Rede de lojas físicas</h3>
+            <p class="project-client">Cliente: rede de lojas físicas, PR</p>
+          </div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="project-panel" id="projeto-6">
+          <div class="project-panel-inner">
+            <p>
+              O cliente não sabia dizer quanto cada canal de marketing
+              realmente gerava em vendas nas lojas físicas. Implementamos
+              rastreamento de origem por loja e construímos um dashboard
+              único cruzando anúncios, redes sociais e vendas no ponto de
+              venda.
+            </p>
+            <div class="project-metrics">
+              <div><strong>9</strong><span>lojas com dados integrados</span></div>
+              <div><strong>-27%</strong><span>em verba redirecionada de canais fracos</span></div>
+              <div><strong>1 dashboard</strong><span>único para toda a rede</span></div>
+            </div>
+            <p class="project-quote">
+              "Pela primeira vez sabemos exatamente para onde vai a verba de
+              marketing." — gerência de marketing da rede
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span id="ano"></span> Elev Marketing Digital. Todos os direitos reservados.</div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/mkt_elev/">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

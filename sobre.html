@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre nós — Elev Marketing Digital</title>
+<meta name="description" content="Conheça a equipe por trás da Elev Marketing Digital.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13" cy="13" r="11.5" stroke="#4FA6E8" stroke-width="1.5"/>
+        <path d="M8 15L13 9L18 15" stroke="#4FA6E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 9V17" stroke="#4FA6E8" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <!-- EDITE AQUI: nome da empresa -->
+      Elev Marketing Digital
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="sobre.html" class="active">Sobre nós</a></li>
+      <li><a href="index.html#servicos">Serviços</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="index.html#depoimentos">Depoimentos</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="index.html#contato" class="btn btn-primary">Falar com a agência</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===================== SEÇÃO: SOBRE NÓS ===================== -->
+  <section class="about">
+    <div class="wrap about-inner">
+      <!--
+        ESPAÇO PARA IMAGEM: troque o conteúdo da div "about-photo" abaixo
+        por uma foto real de alguém da equipe. Basta colocar um arquivo
+        chamado "equipe.jpg" na mesma pasta dos outros arquivos do site
+        (junto com index.html, sobre.html, style.css e script.js).
+        Enquanto não houver o arquivo, aparece um espaço reservado no lugar.
+      -->
+      <div class="about-photo">
+        <img src="img/equipe.png" alt="Foto da equipe da Elev Marketing Digital" onerror="this.style.display='none'; this.parentElement.classList.add('sem-foto');">
+        <span class="about-photo-placeholder">Coloque aqui uma foto da equipe<br>(arquivo "equipe.jpg")</span>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">Quem está por trás dos resultados</p>
+        <!-- EDITE AQUI: título e texto sobre a empresa -->
+        <h1>Sobre a Elev Marketing Digital</h1>
+        <p class="lede">
+          Somos uma equipe de especialistas em marketing digital que acredita
+          em números claros e trabalho de perto com cada cliente. Há 7 anos
+          ajudamos negócios de todos os tamanhos a transformar investimento
+          em marketing em vendas de verdade — com estratégia, dados e muita
+          conversa franca sobre o que está funcionando e o que precisa mudar.
+        </p>
+        <p>
+          Mais do que uma agência, somos parceiros de crescimento: entramos
+          no dia a dia do seu negócio para entender o cliente, o produto e o
+          momento da empresa antes de sugerir qualquer campanha.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO: VALORES ===================== -->
+  <section id="valores">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Como pensamos</h2>
+        <p>Três princípios que guiam qualquer projeto que assumimos.</p>
+      </div>
+      <div class="process-list">
+        <!-- EDITE AQUI: troque pelos valores reais da empresa -->
+        <div class="process-step">
+          <span class="num">01</span>
+          <h3>Clareza antes de tudo</h3>
+          <p>Sem jargão nem relatório confuso — você sempre sabe para onde está indo o investimento.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">02</span>
+          <h3>Dados guiam decisão</h3>
+          <p>Toda campanha é medida. O que não funciona é ajustado ou encerrado rápido.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">03</span>
+          <h3>Parceria de verdade</h3>
+          <p>Tratamos o orçamento do cliente como se fosse nosso — porque, no fundo, o resultado é o mesmo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span id="ano"></span> Elev Marketing Digital. Todos os direitos reservados.</div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/mkt_elev/">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
