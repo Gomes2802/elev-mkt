@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elev Marketing Digital — Marketing que eleva o seu negócio</title>
+<meta name="description" content="Elev Marketing Digital: agência de marketing digital focada em elevar resultado real para negócios que precisam crescer.">
+
+<!--
+=========================================================================
+ COMO EDITAR ESTE SITE
+=========================================================================
+ O site agora está dividido em 3 arquivos, na mesma pasta:
+   - index.html  → estrutura e textos (este arquivo)
+   - style.css   → cores, fontes e layout
+   - script.js   → pequenos comportamentos (menu mobile, ano no rodapé)
+
+ Mantenha os 3 arquivos sempre juntos na mesma pasta — o index.html
+ depende dos outros dois para funcionar. Para editar, abra o arquivo
+ correspondente no Bloco de Notas, VS Code, ou qualquer editor de texto.
+
+ O que você provavelmente vai querer mudar primeiro:
+   1. Nome da empresa: procure por "Elev Marketing Digital" (Ctrl+F) no
+      index.html e troque em todos os lugares.
+   2. Cores: seção ":root" logo no início do style.css.
+   3. Textos: cada seção do index.html tem um comentário em maiúsculas
+      tipo <-- SEÇÃO: SERVIÇOS -- > indicando onde ela começa.
+   4. Formulário de contato: por padrão ele abre o e-mail do usuário
+      (mailto). Se quiser recolher os dados num serviço (Google Forms,
+      Formspree, etc.), troque o "action" do <form> lá embaixo.
+   5. Imagens: este site usa apenas formas e ícones desenhados em CSS/SVG,
+      então não há fotos para substituir — mas você pode adicionar uma
+      <img> facilmente dentro de qualquer seção.
+
+ Depois de editar, é só salvar o arquivo e recarregar o index.html no
+ navegador.
+=========================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+  <nav class="wrap">
+    <a href="#topo" class="logo">
+      <!-- Ícone simples de seta ascendente (elevação). Troque por um <img src="logo.png"> se tiver uma logo pronta. -->
+      <svg class="mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13" cy="13" r="11.5" stroke="#4FA6E8" stroke-width="1.5"/>
+        <path d="M8 15L13 9L18 15" stroke="#4FA6E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 9V17" stroke="#4FA6E8" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <!-- EDITE AQUI: nome da empresa -->
+      Elev Marketing Digital
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#processo">Como trabalhamos</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contato" class="btn btn-primary">Falar com a agência</a>
+    </div>
+  </nav>
+</header>
+
+<main id="topo">
+
+  <!-- ===================== SEÇÃO: HERO ===================== -->
+  <section class="hero wrap">
+    <div>
+      <p class="eyebrow">Marketing digital para negócios que querem crescer</p>
+      <!-- EDITE AQUI: título principal -->
+      <h1>Marketing que eleva o seu negócio a outro patamar.</h1>
+      <p class="lede">
+        Cuidamos de estratégia, tráfego pago, conteúdo e dados para que cada real
+        investido em marketing volte em forma de cliente. Sem promessa vazia,
+        sem relatório que ninguém entende.
+      </p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn btn-primary">Pedir um diagnóstico gratuito</a>
+        <a href="#resultados" class="btn btn-ghost">Ver resultados de clientes</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>+120</strong><span>marcas atendidas</span></div>
+        <div><strong>3,4x</strong><span>retorno médio sobre investimento em tráfego</span></div>
+        <div><strong>7 anos</strong><span>de operação no mercado</span></div>
+      </div>
+    </div>
+
+    <!-- Ilustração simples: linha de crescimento, sem depender de fotos -->
+    <div class="hero-art">
+      <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+        <line x1="30" y1="20" x2="30" y2="230" stroke="#26425F" stroke-width="1"/>
+        <line x1="30" y1="230" x2="400" y2="230" stroke="#26425F" stroke-width="1"/>
+        <polyline points="30,200 100,190 160,160 220,175 280,110 340,90 400,40"
+                  fill="none" stroke="#4FA6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="400" cy="40" r="6" fill="#4FA6E8"/>
+        <text x="30" y="252" fill="#9AB3CC" font-size="12" font-family="Inter, sans-serif">Jan</text>
+        <text x="370" y="252" fill="#9AB3CC" font-size="12" font-family="Inter, sans-serif">Dez</text>
+        <text x="330" y="30" fill="#EFF4F9" font-size="13" font-family="Inter, sans-serif">Leads gerados</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO: SERVIÇOS ===================== -->
+  <section class="services" id="servicos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>O que fazemos</h2>
+        <p>Seis frentes que costumam trabalhar juntas — mas você pode contratar só a que precisa agora.</p>
+      </div>
+      <div class="service-grid">
+        <!-- EDITE AQUI: cada bloco abaixo é um serviço. Copie/cole o <div class="service-card"> para adicionar mais. -->
+        <div class="service-card">
+          <h3>Tráfego pago</h3>
+          <p>Campanhas no Google, Meta e TikTok Ads com foco em custo por venda, não em cliques baratos.</p>
+        </div>
+        <div class="service-card">
+          <h3>Redes sociais</h3>
+          <p>Planejamento de conteúdo, produção e gestão diária de Instagram, TikTok e LinkedIn.</p>
+        </div>
+        <div class="service-card">
+          <h3>SEO e conteúdo</h3>
+          <p>Blog, páginas e otimização técnica para o seu site aparecer quando o cliente procura.</p>
+        </div>
+        <div class="service-card">
+          <h3>Branding</h3>
+          <p>Identidade visual, tom de voz e posicionamento — a base antes de qualquer campanha.</p>
+        </div>
+        <div class="service-card">
+          <h3>E-mail e automação</h3>
+          <p>Fluxos de nutrição e recuperação de carrinho que vendem enquanto você dorme.</p>
+        </div>
+        <div class="service-card">
+          <h3>Consultoria de dados</h3>
+          <p>Dashboards e análises que mostram exatamente de onde vêm os seus clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO: PROCESSO ===================== -->
+  <section id="processo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Como trabalhamos</h2>
+        <p>Um processo direto, em quatro etapas, do primeiro contato ao relatório mensal.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-step">
+          <span class="num">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Analisamos seu site, redes e concorrência para entender onde estão as maiores oportunidades.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">02</span>
+          <h3>Estratégia</h3>
+          <p>Definimos canais, metas e orçamento com base no que realmente move o seu negócio.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">03</span>
+          <h3>Execução</h3>
+          <p>Colocamos campanhas e conteúdo no ar, com acompanhamento semanal do time.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">04</span>
+          <h3>Relatório e ajuste</h3>
+          <p>Todo mês você recebe um relatório claro, com o que funcionou e o próximo passo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO: RESULTADOS ===================== -->
+  <section class="results" id="resultados">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Resultados de clientes</h2>
+        <p>Números reais de campanhas que rodaram nos últimos 12 meses.</p>
+      </div>
+      <div class="result-grid">
+        <!-- EDITE AQUI: troque os números e textos pelos seus cases reais -->
+        <div class="result-card">
+          <div class="metric">+184%</div>
+          <div class="metric-label">em vendas online no primeiro trimestre</div>
+          <p>Reestruturação completa de campanhas de tráfego pago e página de checkout.</p>
+          <div class="client">Loja de moda feminina — SP</div>
+        </div>
+        <div class="result-card">
+          <div class="metric">R$ 6,20</div>
+          <div class="metric-label">custo por lead qualificado</div>
+          <p>Redução de 58% no custo por lead com nova segmentação e criativos testados.</p>
+          <div class="client">Clínica odontológica — PR</div>
+        </div>
+        <div class="result-card">
+          <div class="metric">3,1x</div>
+          <div class="metric-label">retorno sobre o investimento em anúncios</div>
+          <p>Funil de e-mail combinado com anúncios de remarketing para recompra.</p>
+          <div class="client">E-commerce de cosméticos — RS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO: DEPOIMENTOS ===================== -->
+  <section id="depoimentos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>O que dizem os clientes</h2>
+      </div>
+      <div class="testimonials">
+        <!-- EDITE AQUI: troque pelos depoimentos reais dos seus clientes -->
+        <div class="testimonial">
+          <p>"Em seis meses entendemos, pela primeira vez, de onde vinham nossas vendas de verdade."</p>
+          <div class="who">Marina Alves, sócia — Loja de moda feminina</div>
+        </div>
+        <div class="testimonial">
+          <p>"O relatório mensal é o único que a nossa equipe realmente lê até o fim."</p>
+          <div class="who">Ricardo Nunes, diretor — Clínica odontológica</div>
+        </div>
+        <div class="testimonial">
+          <p>"Trocamos de agência três vezes antes. Foi a primeira que tratou orçamento como dinheiro nosso."</p>
+          <div class="who">Fernanda Costa, fundadora — E-commerce de cosméticos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO: CONTATO ===================== -->
+  <section class="contact" id="contato">
+    <div class="wrap contact-inner">
+      <div class="contact-info">
+        <h2>Vamos conversar sobre o seu marketing?</h2>
+        <p>
+          Preencha o formulário e nossa equipe responde em até um dia útil com
+          um diagnóstico inicial gratuito.
+        </p>
+        <div class="contact-details">
+          <!-- EDITE AQUI: dados de contato -->
+          <div><span>E-mail</span>contato@elevmarketing.com</div>
+          <div><span>Telefone / WhatsApp</span>(44) 99246-1983</div>
+          <div><span>Endereço</span>Maringá, PR</div>
+        </div>
+      </div>
+
+      <!--
+        Este formulário usa "mailto" — ao clicar em enviar, abre o programa
+        de e-mail do visitante já preenchido. Para receber os dados direto
+        num banco de dados ou planilha, troque o "action" abaixo pelo link
+        de um serviço como Formspree, Google Forms ou similar.
+      -->
+      <form action="mailto:contato@elevmarketing.com.br" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div>
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa">
+        </div>
+        <div>
+          <label for="mensagem">Como podemos ajudar?</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer>
+  <div class="wrap footer-inner">
+    <!-- EDITE AQUI: nome da empresa e ano -->
+    <div>© <span id="2019"></span> Elev Marketing Digital. Todos os direitos reservados.</div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/mkt_elev/">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
