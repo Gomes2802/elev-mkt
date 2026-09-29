@@ -13,6 +13,7 @@ function setMenuOpen(isOpen) {
   navLinks.classList.toggle('open', isOpen);
   navToggle.setAttribute('aria-expanded', isOpen);
   navToggle.textContent = isOpen ? '✕' : '☰';
+    
   if (navBackdrop) navBackdrop.classList.toggle('open', isOpen);
   document.body.classList.toggle('menu-open', isOpen);
 }
