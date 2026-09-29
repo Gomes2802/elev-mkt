@@ -584,3 +584,34 @@
   @media (max-width:860px){
     .mvv-grid{ grid-template-columns:1fr; }
   }
+
+
+  /* ======================= DIFERENCIAIS (página Sobre) ======================= */
+  .diff-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .diff-card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px 28px;
+  }
+  .diff-card .num{
+    display:block;
+    font-family:var(--font-display);
+    color:var(--accent);
+    font-size:1.1rem;
+    margin-bottom:12px;
+  }
+  .diff-card h3{ font-size:1.1rem; margin-bottom:10px; }
+  .diff-card p{ color:var(--ink-muted); font-size:0.95rem; }
+  /* O sétimo item ocupa a linha inteira para não ficar sozinho num canto */
+  .diff-card:last-child{ grid-column:1 / -1; }
+  @media (max-width:860px){
+    .diff-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .diff-grid{ grid-template-columns:1fr; }
+  }
