@@ -137,34 +137,48 @@
   body.menu-open{ overflow:hidden; }
 
   @media (max-width:860px){
+    /* O backdrop-filter cria um "contêiner" que prenderia o painel fixo
+       dentro do cabeçalho; por isso é removido no celular. */
+    header{ backdrop-filter:none; background:var(--bg); }
+
+    /* Aba lateral que desliza da direita */
     .nav-links{
-      position:absolute; top:100%; left:0; right:0;
-      max-height:calc(100vh - 100%);
+      position:fixed;
+      top:0; right:0; bottom:0;
+      width:min(320px, 85vw);
+      height:100vh;
+      height:100dvh;
       overflow-y:auto;
-      background:var(--bg-alt);
+      display:flex;
       flex-direction:column;
       gap:0;
-      border-bottom:1px solid var(--line);
-      box-shadow:0 16px 32px rgba(4,10,20,0.35);
+      padding-top:80px;
+      background:var(--bg-alt);
+      border-left:1px solid var(--line);
+      box-shadow:-16px 0 32px rgba(4,10,20,0.45);
+      transform:translateX(100%);
+      visibility:hidden;
+      transition:transform .3s ease, visibility .3s;
       z-index:55;
-      display:none;
     }
-    .nav-links.open{ display:flex; }
+    .nav-links.open{ transform:translateX(0); visibility:visible; }
     .nav-links a{
-      padding:16px 32px;
+      padding:16px 28px;
       border-top:1px solid var(--line);
       display:block;
       color:var(--ink);
     }
+    .nav-links a.active{ color:var(--accent); }
     .nav-links li.cta-mobile{
       display:block;
-      padding:20px 32px 28px;
+      padding:24px 28px 32px;
       border-top:1px solid var(--line);
     }
     .nav-links li.cta-mobile a{
-      padding:0;
+      padding:14px 26px;
       border-top:none;
       display:inline-flex;
+      color:var(--accent-ink);
     }
     .nav-toggle{ display:block; position:relative; z-index:56; }
     .nav-cta .btn-primary{ display:none; }
@@ -505,4 +519,68 @@
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     *{ transition:none !important; animation:none !important; }
+  }
+
+  /* ======================= TEMPO DE EXPERIÊNCIA (página Sobre) ======================= */
+  .about-exp{
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    gap:22px;
+  }
+  .about-exp strong{
+    flex-shrink:0;
+    font-family:var(--font-display);
+    font-size:2rem;
+    color:var(--accent);
+    line-height:1;
+  }
+  .about-exp span{ color:var(--ink-muted); font-size:0.95rem; max-width:44ch; }
+  @media (max-width:560px){
+    .about-exp{ flex-direction:column; align-items:flex-start; gap:10px; }
+  }
+
+  /* ======================= MISSÃO, VISÃO E VALORES (página Sobre) ======================= */
+  .mvv-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .mvv-card{
+    background:var(--bg-alt);
+    border:1px solid var(--line);
+    border-top:2px solid var(--accent);
+    border-radius:var(--radius);
+    padding:30px;
+  }
+  .mvv-card h3{ font-size:1.15rem; margin-bottom:12px; }
+  .mvv-card p{ color:var(--ink-muted); font-size:0.96rem; }
+
+  .values-block{ margin-top:56px; }
+  .values-block h3{ font-size:1.15rem; margin-bottom:20px; }
+  .values-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .values-list li{
+    padding:10px 20px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:var(--bg-alt);
+    font-size:0.95rem;
+  }
+  .values-list li::before{
+    content:"";
+    display:inline-block;
+    width:7px; height:7px;
+    margin-right:10px;
+    border-radius:50%;
+    background:var(--accent);
+    vertical-align:middle;
+  }
+  @media (max-width:860px){
+    .mvv-grid{ grid-template-columns:1fr; }
   }
