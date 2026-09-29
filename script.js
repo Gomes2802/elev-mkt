@@ -1,7 +1,8 @@
 // Atualiza o ano do rodapé automaticamente
-document.getElementById('ano').textContent = new Date().getFullYear();
+const anoEl = document.getElementById('ano');
+if (anoEl) anoEl.textContent = new Date().getFullYear();
 
-// Menu mobile: abre um painel com todas as opções da barra do PC
+// Menu mobile: abre um painel lateral com todas as opções da barra do PC
 // (Sobre nós, Serviços, Projetos, Depoimentos, Contato) mais o botão
 // "Falar com a agência". Fecha ao clicar em um link, clicar fora
 // (no fundo escurecido) ou apertar Esc.
@@ -13,7 +14,6 @@ function setMenuOpen(isOpen) {
   navLinks.classList.toggle('open', isOpen);
   navToggle.setAttribute('aria-expanded', isOpen);
   navToggle.textContent = isOpen ? '✕' : '☰';
-    
   if (navBackdrop) navBackdrop.classList.toggle('open', isOpen);
   document.body.classList.toggle('menu-open', isOpen);
 }
@@ -32,6 +32,11 @@ if (navBackdrop) {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
+});
+
+// Fecha o menu se a tela voltar para o tamanho de PC
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) setMenuOpen(false);
 });
 
 // Cards de projeto que expandem ao clicar (página projetos.html)
